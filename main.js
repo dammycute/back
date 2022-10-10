@@ -1,8 +1,8 @@
-const unchecked = document.querySelector('div.field-input > .unchecked')
-const checked = document.querySelector('#checked')
-const todoText = document.querySelector('div.field-input > p')
+const unchecked = document.querySelectorAll('.unchecked');
+const checked = document.querySelectorAll('.checked');
+const todoText = document.querySelectorAll('div.field-input > p')
 const completedList = document.querySelector('#completed-list')
-const fieldInput = document.querySelector('.field-input')
+const fieldInput = document.querySelectorAll('.field-input');
     span = document.querySelector('.span')
     moon = document.querySelector('.moon')
     sun = document.querySelector('.sun')
@@ -19,22 +19,25 @@ cross.onclick = () => {
     fieldInput.style.display = 'none'
 }
 
-
-unchecked.onclick = () => {
-        unchecked.style.display='none'
-        checked.style.display= 'block'
-        todoText.style.textDecoration = 'line-through'
-        todoText.style.color = 'var(--vdgb)'
-        todoText.className += ` completed`
+unchecked.forEach((el, index) => {
+    el.onclick = () => {
+        unchecked[index].style.display='none'
+        checked[index].style.display= 'block'
+        todoText[index].style.textDecoration = 'line-through'
+        todoText[index].style.color = 'var(--vdgb)'
+        todoText[index].className += `completed`
     }
+})
 
-checked.onclick = () => {
-    unchecked.style.display='block'
-    checked.style.display= 'none'
-    todoText.style.textDecoration = 'none'
-    todoText.style.color = 'var(--vdgb)'
-    todoText.className += ``
-}
+checked.forEach((el, index) => {
+    el.onclick = () => {
+        unchecked[index].style.display='block'
+        checked[index].style.display= 'none'
+        todoText[index].style.textDecoration = 'none'
+        todoText[index].style.color = 'var(--vdgb)'
+        todoText[index].className += ``
+    }
+})
 
 completedList.onclick = () => {
     if (todoText.className = 'active'){
@@ -63,6 +66,8 @@ sun.onclick = () => {
     todoBody.className = 'body'
     todoForm.className = 'f'
 }
+
+console.log(unchecked);
 
 // activeList.onclick = () => {
 //     if (todoText.className = 'completed' && 'active'){
