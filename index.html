@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Frontend Mentor | Todo app</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="span"></div class="span">
+  <div class="todo-body">
+    <div class="header">
+      <p>TODO</p>
+      <div class="img-group">
+        <img src="img/icon-moon.svg" class="moon" alt="">
+        <img src="img/icon-sun.svg" class="sun" alt="">
+      </div>
+    </div>
+    <form action="" class="f">
+      <i class="bi bi-circle unchecked" style="padding-right: 10px;"></i><input type="text"
+        placeholder="Create a new todo..">
+    </form>
+
+    <div class="body">
+      <div class="field">
+        <div class="field-input">
+          <i class="bi bi-circle unchecked" id="unchecked"></i>
+          <i class="bi bi-check-circle-fill" id="checked"></i>
+          <p class="active" id="todo-text">I know the night won't last</p>
+          <i class="bi bi-x-lg cross"></i>
+        </div>
+        <div class="field-input">
+          <i class="bi bi-circle unchecked" id="unchecked"></i>
+          <i class="bi bi-check-circle-fill" id="checked"></i>
+          <p class="active" id="todo-text">Go to Dunsin</p>
+        </div>
+        <div class="field-input">
+          <i class="bi bi-circle unchecked" id="unchecked"></i>
+          <i class="bi bi-check-circle-fill" id="checked"></i>
+          <p class="active" id="todo-text">Go to Dunsin</p>
+        </div>
+        <div class="field-input">
+          <i class="bi bi-circle unchecked" id="unchecked"></i>
+          <i class="bi bi-check-circle-fill" id="checked"></i>
+          <p class="active" id="todo-text">Go to Dunsin</p>
+        </div>
+        <hr>
+      </div>
+      <div class="footer">
+        <div class="time"></div>
+        <div class="categories">
+          <small class="all">All</small>
+          <small id="active-list">Active</small>
+          <small id="completed-list">Completed</small>
+        </div>
+        <div class="clear">Clear Completed</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Ht-code</a>.
+  </div>
+</body>
+
+</html>
